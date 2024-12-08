@@ -2,7 +2,7 @@ package entities;
 
 public class TaskEntity {
     private static int counter = 0;
-    private int id;
+    private final int id;
     private String description;
 
     public TaskEntity(String description) {
