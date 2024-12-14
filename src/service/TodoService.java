@@ -14,7 +14,7 @@ public class TodoService {
     }
     public void viewTask() {
         if(taskEntities.isEmpty()){
-            System.out.println("Tarea no encontrada");
+            System.out.println("Lista Vacia");
         }else {
             System.out.println("Tareas encontradas");
             for( TaskEntity task : taskEntities){
@@ -36,6 +36,7 @@ public class TodoService {
         for( TaskEntity task : taskEntities){
             if(task.getId() == id){
                 taskEntities.remove(task);
+                System.out.println("Tarea eliminada:" + task);
                 return;
             }
         }
